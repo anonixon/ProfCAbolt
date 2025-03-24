@@ -22,7 +22,8 @@
     "VITE_ENABLE_PREMIUM": "true",
     "VITE_ENABLE_ANALYTICS": "true",
     "VITE_ENABLE_2FA": "false",
-    "VITE_ENABLE_EMAIL_VERIFICATION": "true"
+    "VITE_ENABLE_EMAIL_VERIFICATION": "true",
+    "VITE_API_URL": ""
   },
   "plugins": [
     {
@@ -43,5 +44,17 @@
         }
       }
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "deploy": {
+    "numInstances": 1,
+    "healthCheck": {
+      "path": "/",
+      "port": 3000
+    }
+  }
 } 
