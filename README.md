@@ -1,79 +1,96 @@
-# ProfCA - Professional Career Assessment
+# ProfCA - Professional Career Assessment Platform
 
-A modern web application for career assessment and business idea generation, built with React, TypeScript, and Supabase.
+A modern web application for professional career assessment and guidance, built with React, Vite, and Tailwind CSS.
 
 ## Features
 
-- 🔐 Authentication with Supabase
-- 💳 Subscription management with Stripe
-- 🎯 Career assessment and recommendations
-- 💡 Business idea generation
-- 🎨 Modern UI with Tailwind CSS
-- 📱 Responsive design
-- 🌙 Dark mode support
+- User authentication and authorization
+- Career assessment questionnaires
+- AI-powered career recommendations
+- Premium subscription tiers
+- Admin dashboard
+- Responsive design
+- Dark mode support
 
 ## Tech Stack
 
 - React 18
-- TypeScript 5
+- Vite
+- TypeScript
 - Tailwind CSS
 - Supabase
 - Stripe
+- Radix UI
 - React Router
-- Axios
+- React Query
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn
-- Supabase account
-- Stripe account
+- npm 9+
+- Git
 
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/profca.git
-   cd profca
-   ```
+```bash
+git clone https://github.com/anonixon/ProfCAbolt.git
+cd ProfCAbolt
+```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Copy the environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Update the environment variables in `.env` with your own values.
-
-5. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-
-The application will be available at `http://localhost:3000`.
-
-## Project Structure
-
+```bash
+npm install
 ```
-src/
-├── components/     # React components
-├── contexts/      # React contexts
-├── hooks/         # Custom hooks
-├── lib/           # Utility functions and API clients
-├── pages/         # Page components
-├── types/         # TypeScript types
-└── styles/        # Global styles
+
+3. Create a `.env` file based on `.env.example`:
+```bash
+cp .env.example .env
 ```
+
+4. Fill in your environment variables in `.env`
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
+```
+
+### Building for Production
+
+Build the application:
+```bash
+npm run build
+```
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+## Deployment on Bolt.new
+
+1. Push your code to GitHub
+2. Connect your repository to Bolt.new
+3. Configure your environment variables in Bolt.new dashboard
+4. Deploy your application
+
+### Environment Variables
+
+Required environment variables for deployment:
+
+- `VITE_SUPABASE_URL`: Your Supabase project URL
+- `VITE_SUPABASE_ANON_KEY`: Your Supabase anonymous key
+- `VITE_STRIPE_PUBLISHABLE_KEY`: Your Stripe publishable key
+- `VITE_STRIPE_BASIC_PRICE_ID`: Stripe price ID for basic tier
+- `VITE_STRIPE_PRO_PRICE_ID`: Stripe price ID for pro tier
+- `VITE_STRIPE_ELITE_PRICE_ID`: Stripe price ID for elite tier
+- `VITE_SITE_URL`: Your site URL
+- `VITE_AI_API_KEY`: Your AI API key
+- `VITE_AI_API_URL`: Your AI API URL
 
 ## Contributing
 

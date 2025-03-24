@@ -1,0 +1,47 @@
+{
+  "name": "ProfCA",
+  "description": "Professional Career Assessment Platform",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": "dist",
+  "env": {
+    "VITE_SUPABASE_URL": "",
+    "VITE_SUPABASE_ANON_KEY": "",
+    "VITE_STRIPE_PUBLISHABLE_KEY": "",
+    "VITE_STRIPE_BASIC_PRICE_ID": "",
+    "VITE_STRIPE_PRO_PRICE_ID": "",
+    "VITE_STRIPE_ELITE_PRICE_ID": "",
+    "VITE_SITE_URL": "",
+    "VITE_SITE_NAME": "ProfCA",
+    "VITE_SITE_DESCRIPTION": "Professional Career Assessment Platform",
+    "VITE_AI_API_KEY": "",
+    "VITE_AI_API_URL": "",
+    "VITE_ENABLE_AI_CHAT": "true",
+    "VITE_ENABLE_PREMIUM": "true",
+    "VITE_ENABLE_ANALYTICS": "true",
+    "VITE_ENABLE_2FA": "false",
+    "VITE_ENABLE_EMAIL_VERIFICATION": "true"
+  },
+  "plugins": [
+    {
+      "name": "supabase",
+      "config": {
+        "projectUrl": "",
+        "anonKey": ""
+      }
+    },
+    {
+      "name": "stripe",
+      "config": {
+        "publishableKey": "",
+        "priceIds": {
+          "basic": "",
+          "pro": "",
+          "elite": ""
+        }
+      }
+    }
+  ]
+} 
